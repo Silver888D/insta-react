@@ -25,8 +25,27 @@ exports.allUsers = async(setter)=>{
             
         });
         const data = await res.json();
-        console.log(data.allUsers);
-        setter(data.allUsers);
+        console.log(data.allUsers.length);
+        setter(data.allUsers.length);
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+exports.deleteUser = async(userName, eMail, passWord, setter)=>{
+    try {
+        const res = await fetch('http://localhost:5000/user',{
+            method: 'DELETE',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                'username':userName,
+                'email':eMail,
+                'password':passWord
+            })
+        });
+        const data = await res.json();
+        console.log(data.deletes);
+        setter(data.deletes);
     } catch (error) {
         console.log(error);
     }

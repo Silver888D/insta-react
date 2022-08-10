@@ -6,6 +6,7 @@ import Header from './header';
 import Snap from './snap';
 import SignupOrLogin from './signupOrLogin';
 import AllUsers from './allUsers';
+import DeleteUser from './deleteuser';
 
 function App() {
   const [user, setUser]= useState('')
@@ -40,9 +41,10 @@ function App() {
       
       
       {user ? <div><h1>{user} logged in</h1>
-      <AllUsers setter={setUsers}/> on this website are:{users}
+      <AllUsers setter={setUsers}/> : {users}
       <Snap></Snap>
-      <button onClick={(event)=>{setDisplay(!display)}}>refresh</button>
+      <DeleteUser setter={setUser}></DeleteUser>
+      <button onClick={(event)=>{setDisplay(!display)}}>images</button>
       {display && pics.map((item, index)=>{
         return (<div>
           <h3>{item.author}</h3>

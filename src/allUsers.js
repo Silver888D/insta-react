@@ -9,7 +9,7 @@ const AllUsers = ({setter})=>{
     }
     return(
         
-        <button onClick={clickHandler}>All Users</button>
+        <button onClick={clickHandler}>Click for Total Users</button>
     );
 }
 
