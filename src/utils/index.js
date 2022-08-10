@@ -17,18 +17,16 @@ exports.signUp = async(userName, eMail, passWord, setter)=>{
     }
 };
 
-exports.allUsers = async(users, setter)=>{
+exports.allUsers = async(setter)=>{
     try {
         const res = await fetch('http://localhost:5000/user',{
             method: 'GET',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({
-                'users':users,
-                })
+            
         });
         const data = await res.json();
-        console.log(data.users);
-        setter(data.users);
+        console.log(data.allUsers);
+        setter(data.allUsers);
     } catch (error) {
         console.log(error);
     }
