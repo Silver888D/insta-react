@@ -25,8 +25,8 @@ exports.allUsers = async(setter)=>{
             
         });
         const data = await res.json();
-        console.log(data.allUsers.length);
-        setter(data.allUsers.length);
+        console.log(data.result.length);
+        setter(data.result.length);
     } catch (error) {
         console.log(error);
     }
@@ -46,6 +46,27 @@ exports.deleteUser = async(userName, eMail, passWord, setter)=>{
         const data = await res.json();
         console.log(data.deletes);
         setter(data.deletes);
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+exports.updateUser = async(userName,old_password, new_userName, email, password, setter)=>{
+    try {
+        const res = await fetch('http://localhost:5000/user',{
+            method: 'PATCH',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                'username':userName,
+                'password': old_password,
+                'new_username':new_userName,
+                'new_email': email,
+                'new_password': password
+            })
+        });
+        const data = await res.json();
+        console.log(data.userUpdate);
+        setter(data.userUpdate);
     } catch (error) {
         console.log(error);
     }

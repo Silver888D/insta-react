@@ -7,6 +7,7 @@ import Snap from './snap';
 import SignupOrLogin from './signupOrLogin';
 import AllUsers from './allUsers';
 import DeleteUser from './deleteuser';
+import UpdateUser from './updateUser';
 
 function App() {
   const [user, setUser]= useState('')
@@ -14,7 +15,9 @@ function App() {
   const [age, setAge]= useState('')
   const [pics, setPics]= useState([]);
   const [display, setDisplay]= useState(false);
-  const [users, setUsers]= useState();
+  const [users, setUsers]= useState(['']);
+  const [del, setDel]= useState();
+  const [upd, setUpd]= useState();
 
   const changeName=()=>{setUser('Harry');}
   const changeUser = (myName, fred) =>{fred(myName);}
@@ -41,9 +44,10 @@ function App() {
       
       
       {user ? <div><h1>{user} logged in</h1>
-      <AllUsers setter={setUsers}/> : {users}
+      <AllUsers setter={setUsers}/>  {users} 
       <Snap></Snap>
-      <DeleteUser setter={setUser}></DeleteUser>
+      <DeleteUser setter={setDel}>User deleted: {del}</DeleteUser>
+      <UpdateUser setter={setUpd}>User updated: {upd}</UpdateUser>
       <button onClick={(event)=>{setDisplay(!display)}}>images</button>
       {display && pics.map((item, index)=>{
         return (<div>

@@ -8,8 +8,10 @@ const AllUsers = ({setter})=>{
         await allUsers(setter);
     }
     return(
-        
+        <div>
         <button onClick={clickHandler}>Click for Total Users</button>
+        
+        </div>
     );
 }
 
