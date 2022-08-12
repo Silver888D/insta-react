@@ -12,7 +12,7 @@ const SignupOrLogin = ({setter})=>{
     return(
         
         <form onSubmit={submitHandler}>
-            <label>Please enter account details:</label><br></br>
+            <label>Create account details:</label><br></br>
             <input onChange={(event)=>setUsername(event.target.value)} placeholder="Username"></input><br></br>
             <input onChange={(event)=>setEmail(event.target.value)} type='email' placeholder="Email"></input><br></br>
             <input onChange={(event)=>setPassword(event.target.value)} placeholder="Password"></input><br></br>

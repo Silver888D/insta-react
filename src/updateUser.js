@@ -14,7 +14,7 @@ const UpdateUser = ({setter})=>{
     return(
         
         <form onSubmit={submitHandler}>
-            <label>Username of user to update:</label><br></br>
+            <label>Username and password of user to update:</label><br></br>
             <input onChange={(event)=>setUsername(event.target.value)} placeholder="Username"></input><br></br>
             <input onChange={(event)=>setPassword(event.target.value)} placeholder="oldpassword"></input><br></br>
 

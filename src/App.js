@@ -44,7 +44,7 @@ function App() {
       
       
       {user ? <div><h1>{user} logged in</h1>
-      <AllUsers setter={setUsers}/>  {users} 
+      <AllUsers setter={setUsers}/> {users} 
       <Snap></Snap>
       <DeleteUser setter={setDel}>User deleted: {del}</DeleteUser>
       <UpdateUser setter={setUpd}>User updated: {upd}</UpdateUser>

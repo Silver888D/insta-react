@@ -25,8 +25,8 @@ exports.allUsers = async(setter)=>{
             
         });
         const data = await res.json();
-        console.log(data.result.length);
-        setter(data.result.length);
+        console.log(data.result);
+        setter(data.result);
     } catch (error) {
         console.log(error);
     }
