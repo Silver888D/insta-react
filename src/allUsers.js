@@ -1,5 +1,5 @@
 
-import { allUsers } from "./utils";
+import { allUsers } from "./utils/index";
 
 const AllUsers = ({setter})=>{
     
