@@ -6,8 +6,8 @@ import Header from './header';
 import Snap from './snap';
 import SignupOrLogin from './signupOrLogin';
 import ListUsers from './listUsers';
-import DeleteUser from './deleteuser';
-import UpdateUser from './updateUser';
+import DeleteUser from './userDelete';
+import UpdateUser from './userUpdate';
 
 
 function App() {
