@@ -1,4 +1,4 @@
-import './App.css';
+import '../App.css';
 
 const Snap =()=>{
     return (<div className='Snap'>
