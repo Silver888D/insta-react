@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { login, signUp } from "./utils";
+import { login, signUp } from "../utils
 
 const SignupOrLogin = ({setter})=>{
     const [username, setUsername] = useState();

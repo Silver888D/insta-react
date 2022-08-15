@@ -1,5 +1,5 @@
 
-import findusers  from "./utils";
+import findusers  from "../utils";
 
 const ListUsers = ({setter})=>{
     

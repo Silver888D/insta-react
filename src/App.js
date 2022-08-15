@@ -3,11 +3,11 @@ import './App.css';
 import Box from './box';
 import Other from './Other';
 import Header from './header';
-import Snap from './snap';
-import SignupOrLogin from './signupOrLogin';
-import ListUsers from './listUsers';
-import DeleteUser from './userDelete';
-import UpdateUser from './userUpdate';
+import Snap from './cmpnts/snap';
+import SignupOrLogin from './cmpnts/signupOrLogin';
+import ListUsers from './cmpnts/listUsers';
+import DeleteUser from './cmpnts/userDelete';
+import UpdateUser from './cmpnts/userUpdate';
 
 
 function App() {
