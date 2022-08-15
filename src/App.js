@@ -5,7 +5,7 @@ import Other from './Other';
 import Header from './header';
 import Snap from './snap';
 import SignupOrLogin from './signupOrLogin';
-import ListUsers from './allUsers';
+import ListUsers from './listUsers';
 import DeleteUser from './deleteuser';
 import UpdateUser from './updateUser';
 
