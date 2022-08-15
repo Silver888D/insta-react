@@ -5,7 +5,7 @@ import Other from './Other';
 import Header from './header';
 import Snap from './snap';
 import SignupOrLogin from './signupOrLogin';
-import AllUsers from './allUsers';
+import ListUsers from './allUsers';
 import DeleteUser from './deleteuser';
 import UpdateUser from './updateUser';
 
@@ -45,7 +45,7 @@ function App() {
       
       
       {user ? <div><h1>{user} logged in</h1>
-      <AllUsers setter={setUsers} /> {users} 
+      <ListUsers setter={setUsers} /> {users} 
       <Snap></Snap>
       <DeleteUser setter={setDel}>User deleted: {del}</DeleteUser>
       <UpdateUser setter={setUpd}>User updated: {upd}</UpdateUser>

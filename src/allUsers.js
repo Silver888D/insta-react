@@ -1,7 +1,7 @@
 
-import { allUsers } from "./utils/index";
+import { allUsers } from "./utils";
 
-const AllUsers = ({setter})=>{
+const ListUsers = ({setter})=>{
     
     const clickHandler= async(event)=>{
         
@@ -15,4 +15,4 @@ const AllUsers = ({setter})=>{
     );
 }
 
-export default AllUsers;
+export default ListUsers;
