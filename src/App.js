@@ -8,6 +8,7 @@ import SignupOrLogin from './signupOrLogin';
 import AllUsers from './allUsers';
 import DeleteUser from './deleteuser';
 import UpdateUser from './updateUser';
+import { allUsers } from './utils';
 
 function App() {
   const [user, setUser]= useState('')
