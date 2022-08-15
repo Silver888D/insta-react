@@ -38,7 +38,7 @@ exports.login = async(userName, eMail, passWord, setter)=>{
 };
 
 
-exports.allUsers = async(setter)=>{
+exports.findUsers = async(setter)=>{
     try {
         const res = await fetch(`${process.env.REACT_APP_REST_API}user`,{
             method: 'GET',

@@ -1,11 +1,11 @@
 
-import { allUsers } from "./utils";
+import { findUsers } from "./utils";
 
 const ListUsers = ({setter})=>{
     
     const clickHandler= async(event)=>{
         
-        await allUsers(setter);
+        await findUsers(setter);
     }
     return(
         <div>
