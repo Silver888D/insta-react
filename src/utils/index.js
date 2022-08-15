@@ -38,7 +38,7 @@ exports.login = async(userName, eMail, passWord, setter)=>{
 };
 
 
-exports.findUsers = async(setter)=>{
+exports.findusers = async(setter)=>{
     try {
         const res = await fetch(`${process.env.REACT_APP_REST_API}user`,{
             method: 'GET',
@@ -53,7 +53,7 @@ exports.findUsers = async(setter)=>{
     }
 };
 
-exports.deleteUser = async(userName, eMail, passWord, setter)=>{
+exports.deleteuser = async(userName, eMail, passWord, setter)=>{
     try {
         const res = await fetch(`${process.env.REACT_APP_REST_API}user`,{
             method: 'DELETE',
@@ -72,7 +72,7 @@ exports.deleteUser = async(userName, eMail, passWord, setter)=>{
     }
 };
 
-exports.updateUser = async(userName,old_password, new_userName, email, password, setter)=>{
+exports.updateuser = async(userName,old_password, new_userName, email, password, setter)=>{
     try {
         const res = await fetch(`${process.env.REACT_APP_REST_API}user`,{
             method: 'PATCH',

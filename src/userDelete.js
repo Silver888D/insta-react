@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { deleteUser } from "./utils";
+import  deleteuser  from "./utils";
 
 const DeleteUser = ({setter})=>{
     const [username, setUsername] = useState();
@@ -7,7 +7,7 @@ const DeleteUser = ({setter})=>{
     const [password, setPassword]= useState();
     const submitHandler= async(event)=>{
         event.preventDefault();
-        await deleteUser(username, email, password, setter);
+        await deleteuser(username, email, password, setter);
     }
     return(
         

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { updateUser } from "./utils";
+import updateuser  from "./utils";
 
 const UpdateUser = ({setter})=>{
     const [username, setUsername] = useState();
@@ -9,7 +9,7 @@ const UpdateUser = ({setter})=>{
     const [password, setNewPassword]= useState();
     const submitHandler= async(event)=>{
         event.preventDefault();
-        await updateUser(username, old_password, new_username, email, password, setter);
+        await updateuser(username, old_password, new_username, email, password, setter);
     }
     return(
         
